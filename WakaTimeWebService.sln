@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WakaTimeWebService", "WakaTimeWebService\WakaTimeWebService.csproj", "{6A370D61-DC27-4E2E-ADEC-4C0AC84E5AB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestWakaTimeWebService", "XUnitTestWakaTimeWebService\XUnitTestWakaTimeWebService.csproj", "{F3C53D85-FC0F-428D-9211-F93B73317E44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A370D61-DC27-4E2E-ADEC-4C0AC84E5AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A370D61-DC27-4E2E-ADEC-4C0AC84E5AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A370D61-DC27-4E2E-ADEC-4C0AC84E5AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A370D61-DC27-4E2E-ADEC-4C0AC84E5AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C53D85-FC0F-428D-9211-F93B73317E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C53D85-FC0F-428D-9211-F93B73317E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C53D85-FC0F-428D-9211-F93B73317E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C53D85-FC0F-428D-9211-F93B73317E44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A4F4E31-AE2B-4044-90BA-6BEF0BFDA335}
+	EndGlobalSection
+EndGlobal
