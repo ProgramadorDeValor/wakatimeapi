@@ -5,7 +5,10 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using Azure.Extensions.AspNetCore.Configuration.Secrets;
+using Azure.Identity;
 
 namespace WakaTimeWebService
 {
@@ -18,7 +21,34 @@ namespace WakaTimeWebService
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+                .ConfigureAppConfiguration((context, config) =>
+                {
+   
+                    
+                    var builtConfig = config.Build();
+                    try
+                    {
+                        var credential = new ClientSecretCredential(
+                            builtConfig["AzureKeyVault:TenantId"],
+                            builtConfig["AzureKeyVault:AppClientId"],
+                            builtConfig["AzureKeyVault:AppClientSecret"]
+                        );
+
+                        config.AddAzureKeyVault(
+                            new Uri(builtConfig["AzureKeyVault:VaultUrl"]),
+                            credential
+                        );
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                        throw;
+                    }
+                    
+
+
+                })
+                    .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });

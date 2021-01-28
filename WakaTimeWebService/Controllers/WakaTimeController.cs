@@ -25,7 +25,7 @@ namespace WakaTimeWebService.Controllers
         public WakaTimeController(ILogger<WakaTimeController> logger, IConfiguration config)
         {
             _logger = logger;
-            _service = new WakaTimeService(WakatimeClientHttpFactory.GetClient(config["Wakatime:Apikey"]));
+            _service = new WakaTimeService(WakatimeClientHttpFactory.GetClient(config["WakatimeApiKey"]));
         }
 
         [HttpGet("AllTimeSinceToday")]

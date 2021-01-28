@@ -36,7 +36,7 @@ namespace WakaTimeWebService.Utils
                 JToken jToken = JObject.Parse(jsonString).SelectToken(rootString);
                 return jToken;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw;
             }
